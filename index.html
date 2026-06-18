@@ -862,6 +862,51 @@ let lang = localStorage.getItem('lang') || 'ar';
  
 
 
+<!-- ======== CONTACT ======== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="ctEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+      <h2 class="section-title display-font" id="ctH"></h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center" id="ctSub"></p>
+    </div>
+    <div class="contact-grid">
+      <form class="cf" onsubmit="event.preventDefault()">
+        <div class="cf-h" id="cfH"></div>
+        <div class="fr"><label class="fl" id="lbName"></label><input class="fi" type="text" id="fName" required></div>
+        <div class="fr"><label class="fl" id="lbEmail"></label><input class="fi" type="email" id="fEmail" required></div>
+        <div class="fr"><label class="fl" id="lbSubject"></label><input class="fi" type="text" id="fSubject"></div>
+        <div class="fr"><label class="fl" id="lbMsg"></label><textarea class="ft" id="fMsg" required></textarea></div>
+        <button class="fs" type="submit" id="fSubmit"></button>
+      </form>
+      <div>
+        <div style="font-size:1.0625rem;font-weight:700;margin-bottom:20px" id="ctChannels"></div>
+        <a href="https://wa.me/966505906761" class="ch" target="_blank" rel="noopener">
+          <div class="ch-ico ic-wa">💬</div>
+          <div><div class="ch-title" id="ctWa"></div><div class="ch-val">+966505906761</div></div>
+        </a>
+        <div class="ch">
+          <div class="ch-ico ic-em">✉️</div>
+          <div><div class="ch-title" id="ctEm"></div><div class="ch-val">info@alrassi.com</div></div>
+        </div>
+        <div style="margin-top:24px">
+          <div style="font-size:.875rem;font-weight:600;color:var(--ink-60);margin-bottom:14px" id="socialLbl"></div>
+          <div class="socials">
+            <a href="#" class="soc" aria-label="X / Twitter">𝕏</a>
+            <a href="#" class="soc" aria-label="YouTube">▶</a>
+            <a href="#" class="soc" aria-label="Telegram">✈</a>
+            <a href="#" class="soc" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+        <div class="quran-box">
+          <div class="q-text arabic-text" id="qText"></div>
+          <div class="q-ref" id="qRef"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ======== FOOTER ======== -->
 <footer role="contentinfo">
   <div class="container">
