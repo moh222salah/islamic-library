@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">الشيخ ماجد بن سليمان الرسي | المكتبة الإسلامية الرقمية</title>
+<meta name="description" id="page-desc" content="المرجع الرقمي الرسمي للأعمال العلمية للشيخ ماجد بن سليمان الرسي">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ======== TOKENS ======== */
+:root {
+  --gold:        #B8922A;
+  --gold-light:  #D4AA4A;
+  --gold-pale:   #F7EDD4;
+  --green-deep:  #163524;
+  --green-mid:   #285C3E;
+  --ink:         #111418;
+  --ink-60:      #4B5260;
+  --ink-30:      #9AA0AB;
+  --surface:     #FDFAF4;
+  --surface-2:   #F4EFE5;
+  --surface-3:   #EAE3D5;
+  --white:       #FFFFFF;
+  --shadow:      0 4px 20px rgba(0,0,0,.09);
+  --shadow-lg:   0 12px 48px rgba(0,0,0,.13);
+  --gold-shadow: 0 4px 20px rgba(184,146,42,.22);
+  --r:           8px;
+  --r-lg:        16px;
+  --r-xl:        24px;
+  --t:           .28s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"] {
+  --surface:   #0D1117;
+  --surface-2: #161B22;
+  --surface-3: #21262D;
+  --ink:       #EAE4DA;
+  --ink-60:    #9AA0AB;
+  --ink-30:    #555B65;
+  --white:     #1C2128;
+  --shadow:    0 4px 20px rgba(0,0,0,.40);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,.60);
+}
+
+/* ======== RESET ======== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--surface);color:var(--ink);line-height:1.7;overflow-x:hidden;transition:background var(--t),color var(--t)}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+img{max-width:100%;display:block}
+
+/* ======== LANG FONTS ======== */
+[lang="ar"] body,[lang="ar"] .ar-font{font-family:'Cairo',sans-serif}
+[lang="ar"] .display-font{font-family:'Amiri',serif}
+[lang="ar"] .arabic-text{font-family:'Noto Naskh Arabic',serif}
+[lang="tr"] body,[lang="tr"] .tr-font{font-family:'Source Sans 3',sans-serif}
+[lang="tr"] .display-font{font-family:'Libre Baskerville',serif}
+
+/* ======== UTILS ======== */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.section-sm{padding:64px 0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.eyebrow-line{width:32px;height:1.5px;background:var(--gold);flex-shrink:0}
+[lang="tr"] .eyebrow .eyebrow-line-r{display:none}
+[lang="tr"] .eyebrow .eyebrow-line-l{display:inline-block}
+[lang="ar"] .eyebrow .eyebrow-line-l{display:none}
+[lang="ar"] .eyebrow .eyebrow-line-r{display:inline-block}
+
+.section-title{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;line-height:1.25;margin-bottom:14px}
+.section-sub{font-size:1.0625rem;color:var(--ink-60);line-height:1.85;max-width:580px}
+.gold-bar{width:44px;height:2.5px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin-bottom:28px}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 26px;font-size:.9375rem;font-weight:600;border-radius:var(--r);transition:all var(--t);white-space:nowrap}
+.btn-gold{background:linear-gradient(135deg,#8B6914,var(--gold));color:#fff;box-shadow:var(--gold-shadow)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(184,146,42,.35)}
+.btn-outline{border:1.5px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:var(--gold-pale)}
+
+/* ======== HEADER ======== */
+header{position:fixed;top:0;inset-inline:0;z-index:1000;background:rgba(253,250,244,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--surface-3);transition:background var(--t)}
+[data-theme="dark"] header{background:rgba(13,17,23,.93);border-bottom-color:#30363D}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:13px;flex-shrink:0}
+.logo-mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#7A5C12,var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:700;font-family:'Noto Naskh Arabic',serif;box-shadow:var(--gold-shadow)}
+.logo-name{font-size:.875rem;font-weight:700;line-height:1.25;color:var(--ink)}
+.logo-sub{font-size:.72rem;color:var(--ink-30)}
+
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-size:.875rem;font-weight:500;color:var(--ink-60);padding:8px 13px;border-radius:6px;transition:all var(--t)}
+nav a:hover{color:var(--gold);background:var(--gold-pale)}
+
+.header-end{display:flex;align-items:center;gap:8px}
+.lang-switcher{display:flex;background:var(--surface-2);border:1px solid var(--surface-3);border-radius:20px;padding:3px;gap:2px}
+.lang-opt{padding:5px 14px;border-radius:16px;font-size:.8125rem;font-weight:700;color:var(--ink-60);transition:all var(--t);cursor:pointer}
+.lang-opt.on{background:var(--gold);color:#fff}
+.theme-btn{width:38px;height:38px;border-radius:50%;background:var(--surface-2);border:1px solid var(--surface-3);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--ink-60);transition:all var(--t)}
+.theme-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ======== HERO ======== */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:72px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(184,146,42,.07),transparent 65%),radial-gradient(ellipse 40% 60% at 5% 20%,rgba(22,53,36,.05),transparent 50%)}
+.hero-geo{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M28 4L52 28L28 52L4 28Z' fill='none' stroke='%23B8922A' stroke-width='.35' opacity='.14'/%3E%3C/svg%3E")}
+.hero-wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:72px;padding:80px 0}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.hero-h1{font-size:clamp(2.25rem,5vw,3.75rem);font-weight:700;line-height:1.18;margin-bottom:10px}
+.hero-h1 em{font-style:normal;background:linear-gradient(135deg,#7A5C12,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-subname{font-size:clamp(1.125rem,2.5vw,1.5rem);color:var(--ink-60);margin-bottom:22px;font-family:'Noto Naskh Arabic',serif}
+.hero-desc{font-size:1.0625rem;color:var(--ink-60);line-height:1.85;margin-bottom:36px;max-width:500px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.hero-stats{display:flex;gap:36px;padding-top:28px;border-top:1px solid var(--surface-3)}
+.hs-num{font-size:2rem;font-weight:700;line-height:1;font-family:'Amiri',serif}
+.hs-num span{color:var(--gold)}
+.hs-lbl{font-size:.8125rem;color:var(--ink-30);margin-top:3px}
+
+/* Hero card */
+.hero-visual{position:relative}
+.hcard{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-xl);padding:32px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+[data-theme="dark"] .hcard{border-color:#30363D}
+.hcard-shine{position:absolute;top:0;inset-inline-end:0;width:100px;height:100px;background:linear-gradient(135deg,var(--gold),var(--gold-light));opacity:.07;border-radius:0 var(--r-xl) 0 100%}
+.scholar-av{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));display:flex;align-items:center;justify-content:center;font-family:'Noto Naskh Arabic',serif;font-size:1.6rem;color:#fff;font-weight:700;margin-bottom:16px;box-shadow:0 6px 20px rgba(22,53,36,.3)}
+.scholar-card-name{font-family:'Noto Naskh Arabic',serif;font-size:1.125rem;font-weight:700;margin-bottom:4px}
+.scholar-card-title{font-size:.8125rem;color:var(--ink-30);margin-bottom:20px}
+.card-sep{height:1px;background:var(--surface-3);margin-bottom:18px}
+.recent-tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sm-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--surface-3)}
+.sm-row:last-child{border:none}
+.sm-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.sm-txt{font-size:.875rem;color:var(--ink-60);flex:1}
+.sm-badge{font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:10px}
+.badge-ar{background:rgba(184,146,42,.12);color:var(--gold)}
+.badge-tr{background:rgba(22,53,36,.1);color:var(--green-mid)}
+.fc{position:absolute;background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:14px 18px;box-shadow:var(--shadow)}
+[data-theme="dark"] .fc{border-color:#30363D}
+.fc1{bottom:-18px;inset-inline-start:-36px}
+.fc2{top:-18px;inset-inline-start:-28px}
+.fc-n{font-size:1.6rem;font-weight:700;font-family:'Amiri',serif;color:var(--gold);line-height:1}
+.fc-t{font-size:.72rem;color:var(--ink-30);margin-top:3px}
+
+/* ======== MARQUEE ======== */
+.marquee-bar{background:var(--green-deep);padding:15px 0;overflow:hidden}
+.marquee-track{display:flex;gap:44px;animation:mq 28s linear infinite;width:max-content}
+.mq-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.65);font-size:.875rem;white-space:nowrap}
+.mq-sep{color:var(--gold-light);opacity:.45}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ======== ABOUT ======== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.portrait-wrap{position:relative}
+.portrait-box{aspect-ratio:3/4;max-height:520px;background:linear-gradient(155deg,var(--green-deep),var(--green-mid) 55%,#7A5C12);border-radius:var(--r-xl);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
+.portrait-mono{font-family:'Noto Naskh Arabic',serif;font-size:7rem;color:rgba(255,255,255,.09);font-weight:700;position:absolute;bottom:24px;inset-inline-end:24px;line-height:1}
+.portrait-pill{position:absolute;top:20px;inset-inline-end:20px;background:rgba(184,146,42,.88);backdrop-filter:blur(6px);border-radius:var(--r);padding:8px 14px;font-size:.8125rem;font-weight:700;color:#fff}
+.about-float{position:absolute;bottom:-24px;inset-inline-start:-24px;background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:20px 24px;box-shadow:var(--shadow);min-width:200px}
+[data-theme="dark"] .about-float{border-color:#30363D}
+.af-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.af-val{font-size:1.5rem;font-weight:700;color:var(--gold);font-family:'Amiri',serif;line-height:1}
+.af-lbl{font-size:.72rem;color:var(--ink-30)}
+.tl{margin-top:36px}
+.tl-item{display:flex;gap:18px;padding-bottom:24px;position:relative}
+.tl-item:not(:last-child)::after{content:'';position:absolute;inset-inline-end:9px;top:22px;bottom:0;width:1px;background:var(--surface-3)}
+.tl-dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--gold);background:var(--surface);flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.tl-yr{font-size:.8125rem;font-weight:700;color:var(--gold)}
+.tl-txt{font-size:.9375rem;color:var(--ink-60);margin-top:2px;line-height:1.65}
+
+/* ======== SERMONS ======== */
+.sermons-bg{background:var(--surface-2)}
+.search-wrap{background:var(--white);border:1.5px solid var(--surface-3);border-radius:var(--r-lg);padding:5px 5px 5px 18px;display:flex;align-items:center;gap:10px;max-width:580px;margin:0 auto 44px;box-shadow:var(--shadow);transition:border var(--t)}
+[lang="tr"] .search-wrap{padding:5px 18px 5px 5px}
+[data-theme="dark"] .search-wrap{border-color:#30363D}
+.search-wrap:focus-within{border-color:var(--gold)}
+.search-ico{color:var(--ink-30);font-size:1.1rem;flex-shrink:0}
+.search-in{flex:1;border:none;outline:none;font-family:inherit;font-size:.9375rem;background:transparent;color:var(--ink)}
+.search-in::placeholder{color:var(--ink-30)}
+.search-go{background:linear-gradient(135deg,#7A5C12,var(--gold));color:#fff;border-radius:var(--r);padding:9px 18px;font-size:.875rem;font-weight:700;transition:all var(--t);flex-shrink:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:44px}
+.chip{padding:7px 17px;border-radius:20px;font-size:.875rem;font-weight:500;border:1.5px solid var(--surface-3);color:var(--ink-60);transition:all var(--t);cursor:pointer}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sermons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
+.sc{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:26px;transition:all var(--t);cursor:pointer;position:relative;overflow:hidden}
+[data-theme="dark"] .sc{border-color:#30363D}
+.sc::after{content:'';position:absolute;top:0;inset-inline-end:0;width:3px;height:0;background:linear-gradient(180deg,var(--gold),var(--gold-light));transition:height var(--t)}
+.sc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.sc:hover::after{height:100%}
+.sc-cat{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sc-title{font-size:1.0625rem;font-weight:700;line-height:1.45;margin-bottom:10px}
+.sc-desc{font-size:.875rem;color:var(--ink-60);line-height:1.7;margin-bottom:18px}
+.sc-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lang-badge{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:10px;margin-inline-end:auto}
+.lb-ar{background:rgba(184,146,42,.12);color:#7A5C12}
+.lb-tr{background:rgba(22,53,36,.1);color:var(--green-mid)}
+.meta-it{font-size:.75rem;color:var(--ink-30);display:flex;align-items:center;gap:4px}
+.sc-actions{display:flex;gap:7px;margin-top:16px;padding-top:16px;border-top:1px solid var(--surface-3)}
+.sc-btn{flex:1;padding:9px;border-radius:6px;font-size:.8125rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:5px;transition:all var(--t)}
+.sc-read{background:var(--surface-2);color:var(--ink-60)}
+.sc-read:hover{background:var(--gold-pale);color:var(--gold)}
+.sc-dl{background:var(--gold);color:#fff}
+.sc-dl:hover{background:#7A5C12}
+.pagination{display:flex;align-items:center;justify-content:center;gap:7px}
+.pg{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.875rem;font-weight:700;color:var(--ink-60);border:1.5px solid var(--surface-3);cursor:pointer;transition:all var(--t)}
+.pg:hover,.pg.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+
+/* ======== TURKISH ======== */
+.turkish-sec{background:linear-gradient(135deg,var(--green-deep) 0%,#0E2217 100%);position:relative;overflow:hidden}
+.turkish-sec::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Ccircle cx='36' cy='36' r='28' fill='none' stroke='rgba(184,146,42,.07)' stroke-width='1'/%3E%3C/svg%3E")}
+.tr-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.tr-eyebrow .eyebrow-line,.tr-eyebrow .eyebrow-line-r,.tr-eyebrow .eyebrow-line-l{background:var(--gold-light)!important}
+.tr-eyebrow{color:var(--gold-light)!important}
+.tr-title{color:#fff}
+.tr-desc{color:rgba(255,255,255,.6);font-size:1.0625rem;line-height:1.85;margin-bottom:36px}
+.prog-item{margin-bottom:18px}
+.prog-head{display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:7px}
+.prog-lbl{color:rgba(255,255,255,.65)}
+.prog-val{color:var(--gold-light);font-weight:700}
+.prog-bar{height:5px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,#7A5C12,var(--gold-light));border-radius:3px}
+.tr-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tc{background:rgba(255,255,255,.05);border:1px solid rgba(184,146,42,.18);border-radius:var(--r-lg);padding:22px;backdrop-filter:blur(6px)}
+.tc-icon{font-size:1.375rem;margin-bottom:10px}
+.tc-title{font-size:.9375rem;font-weight:700;color:#fff;margin-bottom:5px}
+.tc-text{font-size:.8125rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ======== BOOKS ======== */
+.books-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.bk{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);overflow:hidden;transition:all var(--t);cursor:pointer}
+[data-theme="dark"] .bk{border-color:#30363D}
+.bk:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.bk-cover{height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.bk-c1{background:linear-gradient(155deg,#163524,#285C3E)}
+.bk-c2{background:linear-gradient(155deg,#4A2C0A,#8B6914)}
+.bk-c3{background:linear-gradient(155deg,#1A1A40,#2D2D8B)}
+.bk-c4{background:linear-gradient(155deg,#3A1212,#8B2020)}
+.bk-pat{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Cpath d='M18 2L34 18L18 34L2 18Z' fill='none' stroke='rgba(255,255,255,.07)' stroke-width='1'/%3E%3C/svg%3E")}
+.bk-cover-title{position:relative;z-index:1;font-size:.9375rem;font-weight:700;color:rgba(255,255,255,.9);text-align:center;padding:20px;line-height:1.5;font-family:'Noto Naskh Arabic',serif}
+.bk-body{padding:18px}
+.bk-cat{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.bk-title{font-size:.9375rem;font-weight:700;line-height:1.4;margin-bottom:7px}
+.bk-desc{font-size:.8125rem;color:var(--ink-60);line-height:1.65;margin-bottom:14px}
+.bk-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--surface-3)}
+.bk-dl{display:flex;align-items:center;gap:5px;font-size:.8125rem;font-weight:700;color:#7A5C12;padding:6px 12px;background:var(--gold-pale);border-radius:6px;transition:all var(--t)}
+.bk-dl:hover{background:var(--gold-light)}
+.bk-lang{font-size:.72rem;color:var(--ink-30)}
+
+/* ======== STATS ======== */
+.stats-sec{background:var(--ink);position:relative;overflow:hidden}
+[data-theme="dark"] .stats-sec{background:#090C11}
+.stats-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 50% 50%,rgba(184,146,42,.06),transparent 70%)}
+.stats-row{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:var(--r-xl);overflow:hidden}
+.sb{background:var(--ink);padding:52px 28px;text-align:center;transition:background var(--t)}
+[data-theme="dark"] .sb{background:#090C11}
+.sb:hover{background:rgba(184,146,42,.05)}
+.sb-n{font-size:3.25rem;font-weight:700;font-family:'Amiri',serif;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:8px}
+.sb-l{font-size:.9375rem;color:rgba(255,255,255,.42)}
+.sb-s{font-size:.8125rem;color:rgba(255,255,255,.24);margin-top:5px}
+
+/* ======== CATS ======== */
+.cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cat{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:28px;display:flex;gap:18px;align-items:flex-start;transition:all var(--t);cursor:pointer}
+[data-theme="dark"] .cat{border-color:#30363D}
+.cat:hover{border-color:var(--gold);box-shadow:var(--gold-shadow)}
+.cat-ico{width:50px;height:50px;border-radius:var(--r);background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.cat-title{font-size:1rem;font-weight:700;margin-bottom:4px}
+.cat-sub{font-size:.8125rem;color:var(--ink-60);margin-bottom:8px;line-height:1.55}
+.cat-arr{color:var(--gold);font-size:.8125rem;font-weight:700}
+
+/* ======== DOWNLOAD ======== */
+.dl-bg{background:var(--surface-2)}
+.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dlc{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:32px;text-align:center;transition:all var(--t)}
+[data-theme="dark"] .dlc{border-color:#30363D}
+.dlc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.dlc-ico{width:64px;height:64px;border-radius:var(--r-lg);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:1.75rem}
+.di-pdf{background:rgba(139,32,32,.1)}
+.di-audio{background:rgba(22,53,36,.1)}
+.di-video{background:rgba(26,26,64,.1)}
+.dlc-title{font-size:1rem;font-weight:700;margin-bottom:6px}
+.dlc-sub{font-size:.875rem;color:var(--ink-60);margin-bottom:18px}
+.dlc-btn{display:block;padding:10px;border-radius:var(--r);font-size:.875rem;font-weight:700;transition:all var(--t)}
+.db-pdf{background:rgba(139,32,32,.08);color:#8B2020}.db-pdf:hover{background:#8B2020;color:#fff}
+.db-audio{background:rgba(22,53,36,.08);color:var(--green-mid)}.db-audio:hover{background:var(--green-mid);color:#fff}
+.db-video{background:rgba(26,26,64,.08);color:#2D2D8B}.db-video:hover{background:#2D2D8B;color:#fff}
+
+/* ======== NEWSLETTER ======== */
+.nl-sec{background:linear-gradient(135deg,#7A5C12 0%,var(--gold) 45%,var(--green-deep) 100%);position:relative;overflow:hidden}
+.nl-sec::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M45 8L82 45L45 82L8 45Z' fill='none' stroke='rgba(255,255,255,.05)' stroke-width='1'/%3E%3C/svg%3E")}
+.nl-inner{position:relative;z-index:1;text-align:center;max-width:620px;margin:0 auto}
+.nl-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:#fff;margin-bottom:12px}
+.nl-desc{color:rgba(255,255,255,.7);font-size:1.0625rem;margin-bottom:32px}
+.nl-form{display:flex;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-xl);padding:5px;backdrop-filter:blur(6px)}
+.nl-in{flex:1;background:transparent;border:none;outline:none;font-family:inherit;font-size:.9375rem;color:#fff;padding:10px 14px}
+.nl-in::placeholder{color:rgba(255,255,255,.45)}
+.nl-btn{background:#fff;color:#7A5C12;border-radius:var(--r-lg);padding:11px 22px;font-size:.9375rem;font-weight:700;flex-shrink:0;transition:all var(--t)}
+.nl-btn:hover{background:var(--gold-pale)}
+
+/* ======== CONTACT ======== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.cf{background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-xl);padding:38px;box-shadow:var(--shadow)}
+[data-theme="dark"] .cf{border-color:#30363D}
+.cf-h{font-size:1.125rem;font-weight:700;margin-bottom:22px}
+.fr{margin-bottom:18px}
+.fl{display:block;font-size:.875rem;font-weight:600;color:var(--ink-60);margin-bottom:7px}
+.fi,.ft{width:100%;padding:11px 14px;border:1.5px solid var(--surface-3);border-radius:var(--r);font-family:inherit;font-size:.9375rem;background:var(--surface);color:var(--ink);outline:none;transition:border var(--t)}
+.fi:focus,.ft:focus{border-color:var(--gold)}
+.ft{min-height:120px;resize:vertical}
+.fs{width:100%;background:linear-gradient(135deg,#7A5C12,var(--gold));color:#fff;border-radius:var(--r);padding:13px;font-size:1rem;font-weight:700;transition:all var(--t);box-shadow:var(--gold-shadow)}
+.fs:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,146,42,.35)}
+.ch{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--surface-3);border-radius:var(--r-lg);padding:18px 22px;margin-bottom:14px;transition:all var(--t);cursor:pointer}
+[data-theme="dark"] .ch{border-color:#30363D}
+.ch:hover{border-color:var(--gold)}
+.ch-ico{width:46px;height:46px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.ic-wa{background:rgba(37,211,102,.12)}.ic-em{background:rgba(184,146,42,.1)}
+.ch-title{font-size:.9375rem;font-weight:700}
+.ch-val{font-size:.875rem;color:var(--ink-60);margin-top:2px}
+.socials{display:flex;gap:10px;margin-top:26px}
+.soc{width:42px;height:42px;border-radius:50%;background:var(--white);border:1px solid var(--surface-3);display:flex;align-items:center;justify-content:center;font-size:.875rem;color:var(--ink-60);transition:all var(--t)}
+[data-theme="dark"] .soc{border-color:#30363D}
+.soc:hover{border-color:var(--gold);color:var(--gold)}
+.quran-box{margin-top:32px;padding:22px;background:var(--surface-2);border-radius:var(--r-lg);border:1px solid var(--surface-3);text-align:center}
+[data-theme="dark"] .quran-box{border-color:#30363D}
+.q-text{font-family:'Noto Naskh Arabic',serif;font-size:1.0625rem;font-weight:700;color:var(--gold);margin-bottom:6px;line-height:1.7}
+.q-ref{font-size:.8125rem;color:var(--ink-30)}
+
+/* ======== FOOTER ======== */
+footer{background:var(--ink);color:rgba(255,255,255,.55)}
+[data-theme="dark"] footer{background:#090C11}
+.ft-top{padding:68px 0 44px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ft-brand{}
+.ft-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.ft-lm{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#7A5C12,var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Noto Naskh Arabic',serif;color:#fff;font-size:1rem;font-weight:700}
+.ft-ln-name{font-size:.875rem;font-weight:700;color:rgba(255,255,255,.88)}
+.ft-ln-sub{font-size:.72rem;color:rgba(255,255,255,.35)}
+.ft-desc{font-size:.875rem;line-height:1.8;max-width:290px}
+.ft-col-h{font-size:.875rem;font-weight:700;color:rgba(255,255,255,.88);margin-bottom:18px}
+.ft-links{display:flex;flex-direction:column;gap:9px}
+.ft-links a{font-size:.875rem;color:rgba(255,255,255,.45);transition:color var(--t)}
+.ft-links a:hover{color:var(--gold-light)}
+.ft-bot{padding:22px 0;display:flex;align-items:center;justify-content:space-between}
+.ft-copy{font-size:.8125rem}
+.ft-gold{color:var(--gold-light)}
+.ft-langs{display:flex;gap:14px}
+.ft-langs a{font-size:.8125rem;color:rgba(255,255,255,.35);transition:color var(--t)}
+.ft-langs a:hover{color:var(--gold-light)}
+
+/* ======== BACK TOP ======== */
+.btt{position:fixed;bottom:28px;inset-inline-start:28px;z-index:900;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#7A5C12,var(--gold));color:#fff;font-size:1.125rem;display:flex;align-items:center;justify-content:center;box-shadow:var(--gold-shadow);opacity:0;transform:translateY(12px);transition:all var(--t)}
+.btt.vis{opacity:1;transform:translateY(0)}
+.btt:hover{transform:translateY(-3px)}
+
+/* ======== RESPONSIVE ======== */
+@media(max-width:1024px){
+  .hero-wrap,.about-grid,.tr-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .sermons-grid,.cats-grid{grid-template-columns:repeat(2,1fr)}
+  .books-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .ft-top{grid-template-columns:1fr 1fr}
+  .hero-visual{display:none}
+  .portrait-wrap{order:-1}
+  .portrait-box{aspect-ratio:16/9}
+  .about-float{position:static;margin-top:16px}
+}
+@media(max-width:768px){
+  .section{padding:60px 0}
+  .sermons-grid,.cats-grid,.dl-grid,.books-grid,.ft-top{grid-template-columns:1fr}
+  nav{display:none}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .hero-stats{flex-direction:column;gap:18px}
+  .nl-form{flex-direction:column}
+  .ft-bot{flex-direction:column;gap:14px;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- ======================================
+     TRANSLATION DATA
+     All strings keyed by lang
+     ====================================== -->
+<script>
+const T = {
+  ar: {
+    dir: 'rtl',
+    pageTitle: 'الشيخ ماجد بن سليمان الرسي | المكتبة الإسلامية الرقمية',
+    logoName: 'الشيخ ماجد الرسي',
+    logoSub: 'المكتبة الإسلامية الرقمية',
+    navAbout: 'عن الشيخ',
+    navSermons: 'الخطب',
+    navBooks: 'الكتب',
+    navTurkish: 'المشروع التركي',
+    navDownloads: 'التحميلات',
+    navContact: 'تواصل',
+    heroEyebrow: 'المرجع الرقمي الرسمي',
+    heroH1a: 'الشيخ',
+    heroH1b: 'ماجد بن سليمان',
+    heroH1c: 'الرسي',
+    heroSubname: 'ماجد بن سليمان الرسي',
+    heroDesc: 'مرجع رقمي موثوق يجمع بين يديك عشرات الخطب والكتب والمحتوى الإسلامي التعليمي، بالعربية والتركية، لتبقى الكلمة العلمية حاضرة في كل مكان.',
+    heroBtn1: 'استعرض الخطب',
+    heroBtn2: 'تعرف على الشيخ',
+    heroStat1n: '١١٠', heroStat1l: 'خطبة مترجمة',
+    heroStat2n: '٢',   heroStat2l: 'لغة حالياً',
+    heroStat3n: '٧+',  heroStat3l: 'لغات مستقبلاً',
+    hcardName: 'الشيخ ماجد بن سليمان الرسي',
+    hcardTitle: 'عالم إسلامي • مؤلف • خطيب',
+    hcardRecent: 'آخر الخطب المضافة',
+    hcardS1: 'خطبة في أصول الدين وأركانه',
+    hcardS2: 'فضائل الإسلام ومحاسنه',
+    hcardS3: 'نواقض الإسلام: دراسة منهجية',
+    mq: ['📖 خطب أصول الدين','🕌 خطب الجمعة','📚 كتب إسلامية','🌙 المواسم الإسلامية','⭐ فضائل الإسلام','📖 نواقض الإسلام','🌍 محتوى متعدد اللغات','📥 تحميل مجاني'],
+    aboutEye: 'عن الشيخ',
+    aboutH: 'ماجد بن سليمان الرسي',
+    aboutP1: 'عالم إسلامي متخصص في الدراسات الشرعية، يعمل على نشر العلم الإسلامي الأصيل من خلال الخطب المنبرية والكتب العلمية ومشاريع الترجمة التي تستهدف إيصال المحتوى الإسلامي الموثوق إلى أوسع شريحة من المسلمين حول العالم.',
+    aboutP2: 'يتميز الشيخ بأسلوبه العلمي المنهجي القائم على الدليل والبرهان، مع الحرص على السهولة والوضوح في التناول، مما جعل أعماله مرجعاً موثوقاً لدى طلاب العلم والعامة على حد سواء.',
+    afExp: '٢٥+', afExpL: 'سنة خبرة',
+    afSer: '١١٠+', afSerL: 'خطبة',
+    afBook: '٧', afBookL: 'مؤلفات',
+    afLang: '٢', afLangL: 'لغات',
+    tlLabel: 'المسيرة العلمية',
+    tl1y: 'بدايات العلم', tl1t: 'طلب العلم الشرعي على يد علماء متخصصين في أصول الدين والفقه الإسلامي',
+    tl2y: 'الخطب المنبرية', tl2t: 'إطلاق سلسلة خطب منهجية شاملة في أصول الإسلام وفضائله ونواقضه',
+    tl3y: 'مشروع الترجمة', tl3t: 'ترجمة ١١٠ خطبة إلى التركية لخدمة المسلمين الناطقين بالتركية',
+    tl4y: 'التوسع المستقبلي', tl4t: 'خطط لترجمة المحتوى إلى الإنجليزية والأردية والفرنسية والإندونيسية',
+    sermonsEye: 'مكتبة الخطب',
+    sermonsH: 'خطب منبرية شاملة',
+    sermonsSub: 'أكثر من ١١٠ خطبة علمية متكاملة، مصنفة ومرتبة، بالعربية والتركية، لسهولة البحث والوصول.',
+    searchPH: 'ابحث في الخطب، الكتب، المقالات...',
+    searchBtn: 'بحث',
+    fAll: 'جميع الخطب', fF1: 'أصول الإسلام', fF2: 'فضائل الإسلام', fF3: 'نواقض الإسلام', fF4: 'المواسم الإسلامية', fF5: 'الكتب',
+    s1cat:'أصول الإسلام', s1title:'الشهادتان أساس الإسلام ومدخله', s1desc:'خطبة علمية تتناول معنى شهادة أن لا إله إلا الله وأن محمداً رسول الله، وأثرهما في حياة المسلم.', s1lang:'ar', s1langT:'🇸🇦 عربي', s1time:'١٢ دقيقة', s1dl:'٢٤٠ تحميل',
+    s2cat:'أصول الإسلام', s2title:'أركان الإسلام الخمسة وحكمتها', s2desc:'بيان منهجي للأركان الخمسة: الشهادة والصلاة والزكاة والصوم والحج، وما فيها من حِكم وأسرار.', s2lang:'ar', s2langT:'🇸🇦 عربي', s2time:'١٥ دقيقة', s2dl:'٣١٠ تحميل',
+    s3cat:'فضائل الإسلام', s3title:'فضائل الإسلام ومحاسنه في الدنيا والآخرة', s3desc:'خطبة تكشف جمال الإسلام وفضائله العظيمة التي تشمل جميع جوانب حياة الإنسان دنياً وآخرة.', s3lang:'ar', s3langT:'🇸🇦 عربي', s3time:'١٥ دقيقة', s3dl:'٣٢٠ تحميل',
+    s4cat:'نواقض الإسلام', s4title:'نواقض الإسلام: دراسة علمية منهجية', s4desc:'بيان واضح لأعظم نواقض الإسلام وأسبابها وكيفية الحذر منها، بأسلوب علمي رصين ومنهجي دقيق.', s4lang:'ar', s4langT:'🇸🇦 عربي', s4time:'١٨ دقيقة', s4dl:'٤١٥ تحميل',
+    s5cat:'المواسم الإسلامية', s5title:'رمضان: شهر التوبة والمغفرة', s5desc:'خطبة تستعرض فضائل شهر رمضان المبارك وما أعده الله فيه من خير ومغفرة ورحمة للعباد.', s5lang:'ar', s5langT:'🇸🇦 عربي', s5time:'١٤ دقيقة', s5dl:'٥٦٠ تحميل',
+    s6cat:'المواسم الإسلامية', s6title:'الحج: رحلة الروح إلى البيت الحرام', s6desc:'خطبة تستعرض أسرار فريضة الحج وحكمها وآثارها التربوية والروحية في نفس المسلم.', s6lang:'ar', s6langT:'🇸🇦 عربي', s6time:'٢٠ دقيقة', s6dl:'٣٨٠ تحميل',
+    scRead:'📖 قراءة', scDl:'⬇ تحميل PDF',
+    pg1:'١', pg2:'٢', pg3:'٣', pg4:'٤', pg11:'١١',
+    trEye:'المشروع التركي', trH:'١١٠ خطبة إلى اللغة التركية',
+    trDesc:'مشروع ترجمة طموح يستهدف إيصال الخطب الإسلامية الموثوقة إلى الناطقين بالتركية في تركيا والعالم، ليكون جسراً بين العلم الإسلامي العربي والمسلمين الأتراك.',
+    pr1l:'أصول الإسلام', pr1n:'٣٠ خطبة', pr1v:100,
+    pr2l:'فضائل الإسلام', pr2n:'٤٠ خطبة', pr2v:90,
+    pr3l:'المواسم الإسلامية', pr3n:'٢٥ خطبة', pr3v:75,
+    pr4l:'نواقض الإسلام', pr4n:'١٥ خطبة', pr4v:60,
+    tc1i:'🇹🇷', tc1t:'الترجمة الدقيقة', tc1x:'ترجمة علمية دقيقة تراعي المصطلحات الشرعية وطبيعة اللغة التركية',
+    tc2i:'📱', tc2t:'سهولة الوصول', tc2x:'تحميل مجاني بصيغة PDF لجميع الخطب المترجمة بلا قيود',
+    tc3i:'🌍', tc3t:'الانتشار الواسع', tc3x:'مُحسّن لمحركات البحث العربية والتركية لأوسع انتشار ممكن',
+    tc4i:'📖', tc4t:'محتوى موثوق', tc4x:'نصوص شرعية أصيلة مراجعة ومدققة من قِبَل متخصصين',
+    booksEye:'المكتبة الرقمية', booksH:'الكتب والمؤلفات', booksBtn:'عرض جميع الكتب ←',
+    b1cat:'العقيدة', b1title:'أصول الدين وقواعده الكبرى', b1desc:'دراسة منهجية في أصول الإسلام وأركانه العقدية', b1dl:'⬇ تحميل مجاني', b1lang:'عربي',
+    b2cat:'العقيدة', b2title:'فضائل الإسلام ومحاسنه', b2desc:'كتاب يستعرض محاسن الإسلام وما يمتاز به من قيم', b2dl:'⬇ تحميل مجاني', b2lang:'عربي',
+    b3cat:'الدعوة', b3title:'نواقض الإسلام: دراسة تأصيلية', b3desc:'دراسة علمية تأصيلية في أعظم نواقض الإسلام', b3dl:'⬇ تحميل مجاني', b3lang:'عربي',
+    b4cat:'العبادات', b4title:'أحكام المواسم الإسلامية', b4desc:'بيان أحكام وفضائل المواسم الإسلامية الكبرى', b4dl:'⬇ تحميل مجاني', b4lang:'عربي',
+    sbn1:'١١٠', sbl1:'خطبة مترجمة', sbs1:'بالعربية والتركية',
+    sbn2:'٧+',  sbl2:'مؤلفات ومصنفات', sbs2:'متاحة للتحميل',
+    sbn3:'٧',   sbl3:'لغات مستقبلية', sbs3:'EN • UR • FR • ID • MS',
+    sbn4:'٩٥+', sbl4:'درجة أداء', sbs4:'Google Lighthouse',
+    catsEye:'التصنيفات', catsH:'تصفح حسب الموضوع',
+    c1i:'🕌', c1t:'أصول الإسلام', c1s:'٣٠ خطبة — تعرف على أركان الدين الحنيف', c1a:'استعرض ←',
+    c2i:'⭐', c2t:'فضائل الإسلام', c2s:'٤٠ خطبة — محاسن الدين وجمال شريعته', c2a:'استعرض ←',
+    c3i:'⚠️', c3t:'نواقض الإسلام', c3s:'١٥ خطبة — تحذيرات وتأصيلات علمية', c3a:'استعرض ←',
+    c4i:'🌙', c4t:'المواسم الإسلامية', c4s:'٢٥ خطبة — رمضان والحج وسائر المواسم', c4a:'استعرض ←',
+    c5i:'📚', c5t:'الكتب والمؤلفات', c5s:'٧+ كتب متاحة للتحميل المجاني', c5a:'استعرض ←',
+    c6i:'🌍', c6t:'لغات متعددة', c6s:'عربي • تركي • وقريباً: إنجليزي، أردو…', c6a:'استعرض ←',
+    dlEye:'مركز التحميلات', dlH:'تحميل المحتوى مجاناً', dlSub:'جميع الموارد متاحة للتحميل المجاني، ساهم في نشر العلم الإسلامي الأصيل.',
+    dl1t:'الخطب بصيغة PDF', dl1s:'١١٠+ ملف بالعربية والتركية', dl1b:'تحميل جميع الخطب',
+    dl2t:'الكتب الصوتية', dl2s:'٧+ كتاب بجودة صوتية عالية', dl2b:'تحميل الكتب الصوتية',
+    dl3t:'المحتوى المرئي', dl3s:'فيديوهات ودروس ومحاضرات', dl3b:'استعرض الفيديوهات',
+    nlTitle:'ابقَ على اطلاع دائم', nlDesc:'اشترك ليصلك كل جديد من خطب وكتب ومحتوى إسلامي تعليمي فور نشره.', nlPH:'بريدك الإلكتروني…', nlBtn:'اشتراك',
+    ctEye:'التواصل', ctH:'تواصل معنا', ctSub:'للاستفسارات، الاقتراحات، أو طلبات التعاون في نشر المحتوى الإسلامي.',
+    cfH:'أرسل رسالتك', fName:'الاسم الكامل', fNamePH:'أدخل اسمك', fEmail:'البريد الإلكتروني', fEmailPH:'example@email.com', fSubject:'الموضوع', fSubjectPH:'موضوع رسالتك', fMsg:'الرسالة', fMsgPH:'اكتب رسالتك هنا…', fSubmit:'إرسال الرسالة ←',
+    ctChannels:'قنوات التواصل', wa:'واتساب', waVal:'+966505906761', em:'البريد الإلكتروني', emVal:'info@alrassi.com',
+    socialLbl:'تابعنا على',
+    qText:'﴿ وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ ﴾', qRef:'آل عمران: ١٠٤',
+    ftDesc:'المرجع الرقمي الرسمي للأعمال العلمية للشيخ ماجد بن سليمان الرسي — خطب وكتب ومحتوى إسلامي بالعربية والتركية.',
+    ftQ:'روابط سريعة', ftC:'التصنيفات', ftL:'اللغات',
+    ftLinks:['الرئيسية','عن الشيخ','مكتبة الخطب','الكتب','المشروع التركي'],
+    ftCats:['أصول الإسلام','فضائل الإسلام','نواقض الإسلام','المواسم الإسلامية'],
+    ftLangs:[['🇸🇦 العربية','/ar'],['🇹🇷 Türkçe','/tr'],['🇬🇧 English (قريباً)','#'],['🇵🇰 اردو (قريباً)','#']],
+    ftCopy:'© ٢٠٢٥ جميع الحقوق محفوظة',
+  },
+  tr: {
+    dir: 'ltr',
+    pageTitle: 'Şeyh Mâcid b. Süleyman er-Ressî | İslami Dijital Kütüphane',
+    logoName: 'Şeyh Mâcid er-Ressî',
+    logoSub: 'İslami Dijital Kütüphane',
+    navAbout: 'Şeyh Hakkında',
+    navSermons: 'Hutbeler',
+    navBooks: 'Kitaplar',
+    navTurkish: 'Türkçe Proje',
+    navDownloads: 'İndirmeler',
+    navContact: 'İletişim',
+    heroEyebrow: 'Resmi Dijital Referans',
+    heroH1a: 'Şeyh',
+    heroH1b: 'Mâcid b. Süleyman',
+    heroH1c: 'er-Ressî',
+    heroSubname: 'ماجد بن سليمان الرسي',
+    heroDesc: 'İslami ilmin güvenilir dijital merkezi; Arapça ve Türkçe yüzlerce hutbe, kitap ve eğitim içeriğiyle ilmin ışığını dünyaya ulaştırıyor.',
+    heroBtn1: 'Hutbeleri Keşfet',
+    heroBtn2: 'Şeyh Hakkında',
+    heroStat1n: '110', heroStat1l: 'Çeviri Hutbe',
+    heroStat2n: '2',   heroStat2l: 'Mevcut Dil',
+    heroStat3n: '7+',  heroStat3l: 'Gelecekte Dil',
+    hcardName: 'Şeyh Mâcid b. Süleyman er-Ressî',
+    hcardTitle: 'İslam Âlimi • Yazar • Hatip',
+    hcardRecent: 'Son Eklenen Hutbeler',
+    hcardS1: 'İslam\'ın Temelleri Hutbesi',
+    hcardS2: 'İslam\'ın Faziletleri',
+    hcardS3: 'İslam\'ı Bozan Şeyler',
+    mq: ['📖 İslam\'ın Temelleri','🕌 Cuma Hutbeleri','📚 İslami Kitaplar','🌙 İslami Mevsimler','⭐ İslam\'ın Faziletleri','📖 Şehadet Kelimesi','🌍 Çok Dilli İçerik','📥 Ücretsiz İndir'],
+    aboutEye: 'Şeyh Hakkında',
+    aboutH: 'Mâcid b. Süleyman er-Ressî',
+    aboutP1: 'İslami ilimler alanında uzmanlaşmış bir İslam âlimi. Minber hutbeleri, ilmi kitaplar ve çeviri projeleriyle özgün İslami bilgiyi dünya genelindeki Müslümanlara ulaştırmayı hedeflemektedir.',
+    aboutP2: 'Şeyh; delile dayalı sistemli ilmi üslubu ve anlaşılır anlatımıyla ilim talebelerinin ve halkın güvenilir kaynağı hâline gelmiştir.',
+    afExp: '25+', afExpL: 'Yıl Tecrübe',
+    afSer: '110+', afSerL: 'Hutbe',
+    afBook: '7', afBookL: 'Eser',
+    afLang: '2', afLangL: 'Dil',
+    tlLabel: 'İlmi Yolculuk',
+    tl1y: 'İlmin Başlangıcı', tl1t: 'Usul ve fıkıh alanlarında uzman âlimlerden şer\'î ilim tahsili',
+    tl2y: 'Minber Hutbeleri', tl2t: 'İslam\'ın temelleri, faziletleri ve onu bozan şeylere dair kapsamlı hutbe serisi',
+    tl3y: 'Çeviri Projesi', tl3t: 'Türkçe konuşan Müslümanlara hizmet için 110 hutbenin Türkçeye tercümesi',
+    tl4y: 'Gelecek Planlar', tl4t: 'İngilizce, Urduca, Fransızca ve Endonezce\'ye çeviri hedefleri',
+    sermonsEye: 'Hutbe Kütüphanesi',
+    sermonsH: 'Kapsamlı Minber Hutbeleri',
+    sermonsSub: '110\'dan fazla ilmi hutbe; Arapça ve Türkçe, kategorilere ayrılmış ve kolayca erişilebilir şekilde.',
+    searchPH: 'Hutbe, kitap, makale ara...',
+    searchBtn: 'Ara',
+    fAll: 'Tüm Hutbeler', fF1: 'İslam\'ın Temelleri', fF2: 'İslam\'ın Faziletleri', fF3: 'İslam\'ı Bozan Şeyler', fF4: 'İslami Mevsimler', fF5: 'Kitaplar',
+    s1cat:'İslam\'ın Temelleri', s1title:'İslam\'ın Beş Şartı ve Hikmeti', s1desc:'İslam\'ın beş temel şartını ele alan kapsamlı bir hutbe: şehadet, namaz, zekât, oruç ve hac.', s1lang:'tr', s1langT:'🇹🇷 Türkçe', s1time:'15 dk', s1dl:'180 indir',
+    s2cat:'İslam\'ın Temelleri', s2title:'Şehadet Kelimesi: İslam\'ın Kapısı', s2desc:'Kelime-i şehadetin anlamı, şartları ve Müslümanın hayatındaki dönüştürücü etkisi üzerine derin bir hutbe.', s2lang:'tr', s2langT:'🇹🇷 Türkçe', s2time:'12 dk', s2dl:'240 indir',
+    s3cat:'İslam\'ın Faziletleri', s3title:'İslam\'ın Güzellikleri ve Üstünlükleri', s3desc:'İslam\'ın insanlığa sunduğu eşsiz güzellikleri, ahlaki üstünlükleri ve insani değerleri ele alan bir hutbe.', s3lang:'tr', s3langT:'🇹🇷 Türkçe', s3time:'16 dk', s3dl:'320 indir',
+    s4cat:'İslam\'ı Bozan Şeyler', s4title:'İslam\'ı Bozan On Şey', s4desc:'İslam\'ı bozan başlıca tehlikeleri, sebeplerini ve bunlardan korunma yollarını ilmi bir üslupla inceleyen hutbe.', s4lang:'tr', s4langT:'🇹🇷 Türkçe', s4time:'18 dk', s4dl:'415 indir',
+    s5cat:'İslami Mevsimler', s5title:'Ramazan: Ruhların Baharı', s5desc:'Ramazan ayının faziletleri, ihya edilmesi gereken ibadetler ve bu mübarek ayda elde edilecek kazanımlar.', s5lang:'tr', s5langT:'🇹🇷 Türkçe', s5time:'14 dk', s5dl:'560 indir',
+    s6cat:'İslami Mevsimler', s6title:'Hac: Kalbin Beytullah\'a Yolculuğu', s6desc:'Hac ibadetinin sırlarını, hikmetlerini ve Müslümanın ruhundaki terbiyevi etkilerini ele alan kapsamlı hutbe.', s6lang:'tr', s6langT:'🇹🇷 Türkçe', s6time:'20 dk', s6dl:'380 indir',
+    scRead:'📖 Oku', scDl:'⬇ PDF İndir',
+    pg1:'1', pg2:'2', pg3:'3', pg4:'4', pg11:'11',
+    trEye:'Türkçe Proje', trH:'110 Hutbe Türkçeye Çevriliyor',
+    trDesc:'Güvenilir İslami hutbeleri Türkçe konuşan Müslümanlara ulaştırmayı hedefleyen kapsamlı bir çeviri projesi; Arap İslam ilmi ile Türk Müslümanları arasında köprü kuruyor.',
+    pr1l:'İslam\'ın Temelleri', pr1n:'30 Hutbe', pr1v:100,
+    pr2l:'İslam\'ın Faziletleri', pr2n:'40 Hutbe', pr2v:90,
+    pr3l:'İslami Mevsimler', pr3n:'25 Hutbe', pr3v:75,
+    pr4l:'İslam\'ı Bozan Şeyler', pr4n:'15 Hutbe', pr4v:60,
+    tc1i:'🇹🇷', tc1t:'Titiz Çeviri', tc1x:'Şer\'î terimlere ve Türkçenin yapısına saygılı ilmi tercüme',
+    tc2i:'📱', tc2t:'Kolay Erişim', tc2x:'Tüm çeviri hutbeler kısıtsız ücretsiz PDF indirmesi',
+    tc3i:'🌍', tc3t:'Geniş Yayılım', tc3x:'Arapça ve Türkçe arama motorları için optimize edilmiş',
+    tc4i:'📖', tc4t:'Güvenilir İçerik', tc4x:'Uzmanlar tarafından incelenmiş ve tashih edilmiş orijinal metinler',
+    booksEye:'Dijital Kütüphane', booksH:'Kitaplar ve Yayınlar', booksBtn:'Tüm Kitapları Gör →',
+    b1cat:'Akide', b1title:'İslam\'ın Temelleri ve Büyük Kaideleri', b1desc:'İslam\'ın inanç esaslarını sistematik biçimde ele alan kapsamlı bir eser', b1dl:'⬇ Ücretsiz İndir', b1lang:'Türkçe',
+    b2cat:'Akide', b2title:'İslam\'ın Güzellikleri ve Üstünlükleri', b2desc:'İslam\'ın sunduğu güzellikleri ve insani değerleri ele alan kapsamlı eser', b2dl:'⬇ Ücretsiz İndir', b2lang:'Türkçe',
+    b3cat:'Davet', b3title:'İslam\'ı Bozan Şeyler: Temellendirme Çalışması', b3desc:'İslam\'ı bozan tehlikeleri ilmi bir metodoloji ile inceleyen eser', b3dl:'⬇ Ücretsiz İndir', b3lang:'Türkçe',
+    b4cat:'İbadetler', b4title:'İslami Mevsimlerin Hükümleri', b4desc:'Büyük İslami mevsimlerin hükümleri ve faziletlerine dair kapsamlı eser', b4dl:'⬇ Ücretsiz İndir', b4lang:'Türkçe',
+    sbn1:'110', sbl1:'Çeviri Hutbe', sbs1:'Arapça ve Türkçe',
+    sbn2:'7+',  sbl2:'Eser ve Yayın', sbs2:'İndir',
+    sbn3:'7',   sbl3:'Gelecekte Dil', sbs3:'EN • UR • FR • ID • MS',
+    sbn4:'95+', sbl4:'Performans Skoru', sbs4:'Google Lighthouse',
+    catsEye:'Kategoriler', catsH:'Konuya Göre Gözat',
+    c1i:'🕌', c1t:'İslam\'ın Temelleri', c1s:'30 hutbe — İslam\'ın şartlarını keşfet', c1a:'Gözat →',
+    c2i:'⭐', c2t:'İslam\'ın Faziletleri', c2s:'40 hutbe — Dinin güzellikleri', c2a:'Gözat →',
+    c3i:'⚠️', c3t:'İslam\'ı Bozan Şeyler', c3s:'15 hutbe — İlmi uyarılar ve temeller', c3a:'Gözat →',
+    c4i:'🌙', c4t:'İslami Mevsimler', c4s:'25 hutbe — Ramazan, Hac ve diğerleri', c4a:'Gözat →',
+    c5i:'📚', c5t:'Kitaplar ve Eserler', c5s:'7+ ücretsiz indirilebilir kitap', c5a:'Gözat →',
+    c6i:'🌍', c6t:'Çok Dilli İçerik', c6s:'Arapça • Türkçe • Yakında: İngilizce…', c6a:'Gözat →',
+    dlEye:'İndirme Merkezi', dlH:'İçeriği Ücretsiz İndir', dlSub:'Tüm kaynaklar ücretsiz indir — özgün İslami ilmi yaymaya ortak ol.',
+    dl1t:'PDF Hutbeler', dl1s:'110+ dosya Arapça ve Türkçe', dl1b:'Tüm Hutbeleri İndir',
+    dl2t:'Sesli Kitaplar', dl2s:'7+ kitap yüksek ses kalitesiyle', dl2b:'Sesli Kitapları İndir',
+    dl3t:'Görsel İçerik', dl3s:'Videolar, dersler ve seminerler', dl3b:'Videoları Gözat',
+    nlTitle:'Her Yenilikten Haberdar Ol', nlDesc:'Yeni hutbe, kitap ve eğitim içerikleri yayınlandığında ilk sen öğren.', nlPH:'E-posta adresin…', nlBtn:'Abone Ol',
+    ctEye:'İletişim', ctH:'Bize Ulaşın', ctSub:'Sorular, öneriler veya İslami içerik yayımı için iş birliği talepleri.',
+    cfH:'Mesajını Gönder', fName:'Ad Soyad', fNamePH:'Adını gir', fEmail:'E-posta', fEmailPH:'ornek@email.com', fSubject:'Konu', fSubjectPH:'Mesajının konusu', fMsg:'Mesaj', fMsgPH:'Mesajını buraya yaz…', fSubmit:'Mesaj Gönder →',
+    ctChannels:'İletişim Kanalları', wa:'WhatsApp', waVal:'+966505906761', em:'E-posta', emVal:'info@alrassi.com',
+    socialLbl:'Bizi Takip Et',
+    qText:'﴿ وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ ﴾', qRef:'Âl-i İmrân: 104',
+    ftDesc:'Şeyh Mâcid b. Süleyman er-Ressî\'nin ilmi eserlerinin resmi dijital referansı — Arapça ve Türkçe hutbeler, kitaplar ve eğitim içerikleri.',
+    ftQ:'Hızlı Bağlantılar', ftC:'Kategoriler', ftL:'Diller',
+    ftLinks:['Ana Sayfa','Şeyh Hakkında','Hutbe Kütüphanesi','Kitaplar','Türkçe Proje'],
+    ftCats:['İslam\'ın Temelleri','İslam\'ın Faziletleri','İslam\'ı Bozan Şeyler','İslami Mevsimler'],
+    ftLangs:[['🇸🇦 العربية','/ar'],['🇹🇷 Türkçe','/tr'],['🇬🇧 English (Yakında)','#'],['🇵🇰 اردو (Yakında)','#']],
+    ftCopy:'© 2025 Tüm hakları saklıdır',
+  }
+};
+
+let lang = localStorage.getItem('lang') || 'ar';
+</script>
+
+<!-- ======== HEADER ======== -->
+<header role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo" id="logo" aria-label="Ana Sayfa / الرئيسية">
+        <div class="logo-mark">م ر</div>
+        <div>
+          <div class="logo-name" id="logoName"></div>
+          <div class="logo-sub" id="logoSub"></div>
+        </div>
+      </a>
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="#about" id="navAbout"></a>
+        <a href="#sermons" id="navSermons"></a>
+        <a href="#books" id="navBooks"></a>
+        <a href="#turkish" id="navTurkish"></a>
+        <a href="#downloads" id="navDownloads"></a>
+        <a href="#contact" id="navContact"></a>
+      </nav>
+      <div class="header-end">
+        <div class="lang-switcher" role="group" aria-label="Language / اللغة">
+          <button class="lang-opt" id="btnAr" onclick="switchLang('ar')" aria-pressed="true">عربي</button>
+          <button class="lang-opt" id="btnTr" onclick="switchLang('tr')" aria-pressed="false">Türkçe</button>
+        </div>
+        <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-gradient"></div>
+    <div class="hero-geo"></div>
+  </div>
+  <div class="container" style="width:100%">
+    <div class="hero-wrap">
+      <div>
+        <div class="hero-eyebrow">
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span id="heroEyebrow"></span>
+        </div>
+        <h1 class="hero-h1 display-font">
+          <span id="heroH1a"></span> <em id="heroH1b"></em><br><span id="heroH1c"></span>
+        </h1>
+        <p class="hero-subname arabic-text" id="heroSubname"></p>
+        <p class="hero-desc" id="heroDesc"></p>
+        <div class="hero-actions">
+          <a href="#sermons" class="btn btn-gold" id="heroBtn1"></a>
+          <a href="#about" class="btn btn-outline" id="heroBtn2"></a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hs-num" id="hStat1n"></div><div class="hs-lbl" id="hStat1l"></div></div>
+          <div><div class="hs-num" id="hStat2n"></div><div class="hs-lbl" id="hStat2l"></div></div>
+          <div><div class="hs-num" id="hStat3n"></div><div class="hs-lbl" id="hStat3l"></div></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hcard">
+          <div class="hcard-shine"></div>
+          <div class="scholar-av">م</div>
+          <div class="scholar-card-name arabic-text" id="hcardName"></div>
+          <div class="scholar-card-title" id="hcardTitle"></div>
+          <div class="card-sep"></div>
+          <div class="recent-tag" id="hcardRecent"></div>
+          <div class="sm-row"><div class="sm-dot"></div><div class="sm-txt" id="hcardS1"></div><div class="sm-badge badge-ar">AR</div></div>
+          <div class="sm-row"><div class="sm-dot"></div><div class="sm-txt" id="hcardS2"></div><div class="sm-badge badge-tr">TR</div></div>
+          <div class="sm-row"><div class="sm-dot"></div><div class="sm-txt" id="hcardS3"></div><div class="sm-badge badge-ar">AR</div></div>
+        </div>
+        <div class="fc fc1"><div class="fc-n">110</div><div class="fc-t" id="fc1t"></div></div>
+        <div class="fc fc2"><div class="fc-n">95+</div><div class="fc-t">Lighthouse</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== MARQUEE ======== -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track" id="mqTrack"></div>
+</div>
+
+<!-- ======== ABOUT ======== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="portrait-wrap">
+        <div class="portrait-box">
+          <div class="portrait-mono" aria-hidden="true">م ر</div>
+          <div class="portrait-pill" id="portraitBadge">عالم إسلامي</div>
+        </div>
+        <div class="about-float">
+          <div class="af-grid">
+            <div><div class="af-val" id="afExp"></div><div class="af-lbl" id="afExpL"></div></div>
+            <div><div class="af-val" id="afSer"></div><div class="af-lbl" id="afSerL"></div></div>
+            <div><div class="af-val" id="afBook"></div><div class="af-lbl" id="afBookL"></div></div>
+            <div><div class="af-val" id="afLang"></div><div class="af-lbl" id="afLangL"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="aboutEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+        <h2 class="section-title display-font" id="aboutH"></h2>
+        <div class="gold-bar" aria-hidden="true"></div>
+        <p style="font-size:1.0625rem;color:var(--ink-60);line-height:1.85;margin-bottom:14px" id="aboutP1"></p>
+        <p style="font-size:.9375rem;color:var(--ink-60);line-height:1.8;margin-bottom:32px" id="aboutP2"></p>
+        <div class="tl" id="tlWrap"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SERMONS ======== -->
+<section class="section sermons-bg" id="sermons">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="sermonsEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+      <h2 class="section-title display-font" id="sermonsH"></h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center" id="sermonsSub"></p>
+    </div>
+    <div class="search-wrap" role="search">
+      <span class="search-ico" aria-hidden="true">🔍</span>
+      <input class="search-in" type="search" id="searchIn" aria-label="Search">
+      <button class="search-go" id="searchBtn"></button>
+    </div>
+    <div class="filters" id="filtersRow" role="group"></div>
+    <div class="sermons-grid" id="sermonsGrid"></div>
+    <div class="pagination" id="pgRow" role="navigation"></div>
+  </div>
+</section>
+
+<!-- ======== TURKISH ======== -->
+<section class="section turkish-sec" id="turkish">
+  <div class="container">
+    <div class="tr-grid">
+      <div>
+        <div class="eyebrow tr-eyebrow"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true" style="background:var(--gold-light)"></span><span id="trEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true" style="background:var(--gold-light)"></span></div>
+        <h2 class="section-title tr-title display-font" id="trH"></h2>
+        <div class="gold-bar" aria-hidden="true"></div>
+        <p class="tr-desc" id="trDesc"></p>
+        <div id="progWrap"></div>
+      </div>
+      <div class="tr-cards" id="trCards"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BOOKS ======== -->
+<section class="section" id="books">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;flex-wrap:wrap;gap:16px">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="booksEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+        <h2 class="section-title display-font" style="margin-bottom:0" id="booksH"></h2>
+      </div>
+      <a href="#" class="btn btn-outline" id="booksBtn"></a>
+    </div>
+    <div class="books-grid" id="booksGrid"></div>
+  </div>
+</section>
+
+<!-- ======== STATS ======== -->
+<section class="stats-sec section-sm">
+  <div class="container">
+    <div class="stats-row" id="statsRow"></div>
+  </div>
+</section>
+
+<!-- ======== CATEGORIES ======== -->
+<section class="section sermons-bg" id="categories">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="catsEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+      <h2 class="section-title display-font" id="catsH"></h2>
+    </div>
+    <div class="cats-grid" id="catsGrid"></div>
+  </div>
+</section>
+
+<!-- ======== DOWNLOADS ======== -->
+<section class="section dl-bg" id="downloads">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="dlEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+      <h2 class="section-title display-font" id="dlH"></h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center" id="dlSub"></p>
+    </div>
+    <div class="dl-grid" id="dlGrid"></div>
+  </div>
+</section>
+
+<!-- ======== NEWSLETTER ======== -->
+<section class="section nl-sec">
+  <div class="container">
+    <div class="nl-inner">
+      <h2 class="nl-title display-font" id="nlTitle"></h2>
+      <p class="nl-desc" id="nlDesc"></p>
+      <form class="nl-form" onsubmit="event.preventDefault()">
+        <input class="nl-in" type="email" id="nlIn" required>
+        <button class="nl-btn" type="submit" id="nlBtn"></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line eyebrow-line-r" aria-hidden="true"></span><span id="ctEye"></span><span class="eyebrow-line eyebrow-line-l" aria-hidden="true"></span></div>
+      <h2 class="section-title display-font" id="ctH"></h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center" id="ctSub"></p>
+    </div>
+    <div class="contact-grid">
+      <form class="cf" onsubmit="event.preventDefault()">
+        <div class="cf-h" id="cfH"></div>
+        <div class="fr"><label class="fl" id="lbName"></label><input class="fi" type="text" id="fName" required></div>
+        <div class="fr"><label class="fl" id="lbEmail"></label><input class="fi" type="email" id="fEmail" required></div>
+        <div class="fr"><label class="fl" id="lbSubject"></label><input class="fi" type="text" id="fSubject"></div>
+        <div class="fr"><label class="fl" id="lbMsg"></label><textarea class="ft" id="fMsg" required></textarea></div>
+        <button class="fs" type="submit" id="fSubmit"></button>
+      </form>
+      <div>
+        <div style="font-size:1.0625rem;font-weight:700;margin-bottom:20px" id="ctChannels"></div>
+        <a href="https://wa.me/966505906761" class="ch" target="_blank" rel="noopener">
+          <div class="ch-ico ic-wa">💬</div>
+          <div><div class="ch-title" id="ctWa"></div><div class="ch-val">+966505906761</div></div>
+        </a>
+        <div class="ch">
+          <div class="ch-ico ic-em">✉️</div>
+          <div><div class="ch-title" id="ctEm"></div><div class="ch-val">info@alrassi.com</div></div>
+        </div>
+        <div style="margin-top:24px">
+          <div style="font-size:.875rem;font-weight:600;color:var(--ink-60);margin-bottom:14px" id="socialLbl"></div>
+          <div class="socials">
+            <a href="#" class="soc" aria-label="X / Twitter">𝕏</a>
+            <a href="#" class="soc" aria-label="YouTube">▶</a>
+            <a href="#" class="soc" aria-label="Telegram">✈</a>
+            <a href="#" class="soc" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+        <div class="quran-box">
+          <div class="q-text arabic-text" id="qText"></div>
+          <div class="q-ref" id="qRef"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          <div class="ft-lm">م ر</div>
+          <div><div class="ft-ln-name" id="ftName"></div><div class="ft-ln-sub" id="ftSub"></div></div>
+        </div>
+        <p class="ft-desc" id="ftDesc"></p>
+      </div>
+      <div>
+        <div class="ft-col-h" id="ftQ"></div>
+        <nav class="ft-links" id="ftLinks" aria-label="Quick links"></nav>
+      </div>
+      <div>
+        <div class="ft-col-h" id="ftC"></div>
+        <nav class="ft-links" id="ftCats" aria-label="Categories"></nav>
+      </div>
+      <div>
+        <div class="ft-col-h" id="ftL"></div>
+        <nav class="ft-links" id="ftLangs" aria-label="Languages"></nav>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p id="ftCopy" style="font-size:.8125rem"></p>
+      <div class="ft-langs">
+        <a href="#" onclick="switchLang('ar');return false">العربية</a>
+        <a href="#" onclick="switchLang('tr');return false">Türkçe</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ======== DEV SIGNATURE ======== -->
+<section class="dev-sig-section" aria-label="Developer Signature">
+  <div class="container">
+    <div class="dev-sig-card">
+      <div class="dev-sig-glow" aria-hidden="true"></div>
+      <div class="dev-sig-inner">
+
+        <div class="dev-sig-left">
+          <div class="dev-avatar" aria-hidden="true">
+            <span>MS</span>
+            <div class="dev-avatar-ring"></div>
+          </div>
+          <div class="dev-badge">
+            <span class="dev-badge-dot"></span>
+            Available for work
+          </div>
+        </div>
+
+        <div class="dev-sig-center">
+          <p class="dev-built">Built &amp; Crafted by</p>
+          <h2 class="dev-name">Mohamed Salah</h2>
+          <p class="dev-role">Senior Full Stack &amp; ERP Developer</p>
+          <p class="dev-desc">
+            Hands-on experience delivering scalable business systems across
+            <strong>Egypt</strong> and the <strong>GCC</strong>.
+          </p>
+
+          <div class="dev-projects">
+            <p class="dev-proj-label">CTO &amp; Projects</p>
+            <div class="dev-proj-grid">
+              <a href="https://sooqkplus.com"    target="_blank" rel="noopener" class="dev-proj"><span>🇸🇦</span> sooqkplus.com</a>
+              <a href="https://furasmisr.com"    target="_blank" rel="noopener" class="dev-proj"><span>🇪🇬</span> furasmisr.com</a>
+              <a href="https://nordicbizhub.com" target="_blank" rel="noopener" class="dev-proj"><span>🇸🇪</span> nordicbizhub.com</a>
+              <a href="https://diwanzakat.com"   target="_blank" rel="noopener" class="dev-proj"><span>🇩🇯</span> diwanzakat.com</a>
+              <a href="https://samtahmedical.com"target="_blank" rel="noopener" class="dev-proj"><span>🇸🇦</span> samtahmedical.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-sig-right">
+          <p class="dev-connect-label">Let's Connect</p>
+          <div class="dev-links">
+            <a href="https://linkedin.com/in/mo222salah"       target="_blank" rel="noopener" class="dev-link dev-link-li">
+              <span class="dev-link-icon">💼</span>
+              <span class="dev-link-text"><span class="dev-link-top">LinkedIn</span><span class="dev-link-sub">mo222salah</span></span>
+            </a>
+            <a href="https://moh222salah.github.io/cv"         target="_blank" rel="noopener" class="dev-link dev-link-cv">
+              <span class="dev-link-icon">🖥</span>
+              <span class="dev-link-text"><span class="dev-link-top">CV &amp; Portfolio</span><span class="dev-link-sub">moh222salah.github.io/cv</span></span>
+            </a>
+            <a href="mailto:moh222salah@gmail.com"              class="dev-link dev-link-em">
+              <span class="dev-link-icon">📧</span>
+              <span class="dev-link-text"><span class="dev-link-top">Email</span><span class="dev-link-sub">moh222salah@gmail.com</span></span>
+            </a>
+            <a href="https://wa.me/201113903070"               target="_blank" rel="noopener" class="dev-link dev-link-wa">
+              <span class="dev-link-icon">📲</span>
+              <span class="dev-link-text"><span class="dev-link-top">WhatsApp</span><span class="dev-link-sub">+20 111 390 3070</span></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.dev-sig-section {
+  background: var(--ink);
+  padding: 56px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+[data-theme="dark"] .dev-sig-section { background: #060911; }
+.dev-sig-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(184,146,42,.055), transparent 70%);
+  pointer-events: none;
+}
+
+.dev-sig-card {
+  position: relative;
+  border: 1px solid rgba(184,146,42,.22);
+  border-radius: 20px;
+  padding: 40px 44px;
+  background: rgba(255,255,255,.03);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+.dev-sig-glow {
+  position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+  width: 420px; height: 180px;
+  background: radial-gradient(ellipse, rgba(184,146,42,.13), transparent 70%);
+  pointer-events: none;
+}
+
+.dev-sig-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+
+/* LEFT */
+.dev-sig-left { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.dev-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: linear-gradient(135deg, #7A5C12, var(--gold-light, #D4AA4A));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 800; color: #fff;
+  position: relative; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(184,146,42,.25), 0 8px 24px rgba(0,0,0,.4);
+  font-family: 'Source Sans 3', 'Cairo', sans-serif;
+  letter-spacing: .04em;
+}
+.dev-avatar-ring {
+  position: absolute; inset: -5px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(184,146,42,.4);
+  animation: spin 16s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.dev-badge {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(82,183,136,.12);
+  border: 1px solid rgba(82,183,136,.3);
+  border-radius: 20px; padding: 4px 12px;
+  font-size: .72rem; font-weight: 700; color: #52B788;
+  white-space: nowrap;
+}
+.dev-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #52B788;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.7)} }
+
+/* CENTER */
+.dev-built {
+  font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: rgba(184,146,42,.7);
+  margin-bottom: 6px;
+}
+.dev-name {
+  font-size: 1.875rem; font-weight: 800; color: #fff;
+  line-height: 1; margin-bottom: 6px;
+  font-family: 'Source Sans 3', 'Cairo', sans-serif;
+}
+.dev-role {
+  font-size: .9375rem; font-weight: 600;
+  background: linear-gradient(90deg, var(--gold-light, #D4AA4A), #fff8e8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+.dev-desc {
+  font-size: .875rem; color: rgba(255,255,255,.45);
+  line-height: 1.6; margin-bottom: 24px;
+  max-width: 380px;
+}
+.dev-desc strong { color: rgba(255,255,255,.7); }
+
+.dev-proj-label {
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(184,146,42,.6);
+  margin-bottom: 10px;
+}
+.dev-proj-grid {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.dev-proj {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px; padding: 5px 12px;
+  font-size: .8125rem; color: rgba(255,255,255,.65);
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.dev-proj:hover {
+  background: rgba(184,146,42,.12);
+  border-color: rgba(184,146,42,.35);
+  color: var(--gold-light, #D4AA4A);
+  transform: translateY(-1px);
+}
+
+/* RIGHT */
+.dev-sig-right { min-width: 240px; }
+.dev-connect-label {
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(184,146,42,.6);
+  margin-bottom: 14px;
+}
+.dev-links { display: flex; flex-direction: column; gap: 10px; }
+.dev-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 14px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  transition: all .25s ease; cursor: pointer;
+}
+.dev-link:hover {
+  transform: translateX(-3px);
+  border-color: rgba(184,146,42,.35);
+  background: rgba(184,146,42,.07);
+}
+[lang="tr"] .dev-link:hover { transform: translateX(3px); }
+.dev-link-icon { font-size: 1.1rem; flex-shrink: 0; }
+.dev-link-text { display: flex; flex-direction: column; gap: 1px; }
+.dev-link-top { font-size: .8125rem; font-weight: 700; color: rgba(255,255,255,.85); }
+.dev-link-sub { font-size: .72rem; color: rgba(255,255,255,.38); }
+
+.dev-link-li:hover .dev-link-top { color: #0A66C2; }
+.dev-link-cv:hover .dev-link-top { color: var(--gold-light, #D4AA4A); }
+.dev-link-em:hover .dev-link-top { color: #EA4335; }
+.dev-link-wa:hover .dev-link-top { color: #25D366; }
+
+/* divider line above sig */
+.dev-sig-section::after {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,146,42,.5), transparent);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .dev-sig-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .dev-sig-left { flex-direction: row; justify-content: flex-start; }
+  .dev-sig-card { padding: 28px 24px; }
+}
+@media (max-width: 480px) {
+  .dev-proj-grid { gap: 6px; }
+  .dev-name { font-size: 1.5rem; }
+}
+</style>
+
+<!-- ======== SCRIPTS ======== -->
+<script>
+/* ---- THEME ---- */
+let dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme:dark)').matches);
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  document.getElementById('themeBtn').textContent = dark ? '☀️' : '🌙';
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+function toggleTheme(){ dark = !dark; applyTheme(); }
+applyTheme();
+
+/* ---- RENDER ---- */
+function render(l) {
+  const t = T[l];
+  document.documentElement.setAttribute('lang', l);
+  document.documentElement.setAttribute('dir', t.dir);
+  document.title = t.pageTitle;
+
+  // helpers
+  const s = (id, v) => { const el = document.getElementById(id); if(el) el.textContent = v; };
+  const h = (id, v) => { const el = document.getElementById(id); if(el) el.innerHTML = v; };
+
+  // lang buttons
+  document.getElementById('btnAr').classList.toggle('on', l === 'ar');
+  document.getElementById('btnTr').classList.toggle('on', l === 'tr');
+  document.getElementById('btnAr').setAttribute('aria-pressed', l === 'ar');
+  document.getElementById('btnTr').setAttribute('aria-pressed', l === 'tr');
+
+  // header
+  s('logoName', t.logoName); s('logoSub', t.logoSub);
+  s('navAbout', t.navAbout); s('navSermons', t.navSermons);
+  s('navBooks', t.navBooks); s('navTurkish', t.navTurkish);
+  s('navDownloads', t.navDownloads); s('navContact', t.navContact);
+
+  // hero
+  s('heroEyebrow', t.heroEyebrow);
+  s('heroH1a', t.heroH1a); s('heroH1b', t.heroH1b); s('heroH1c', t.heroH1c);
+  s('heroSubname', t.heroSubname); s('heroDesc', t.heroDesc);
+  s('heroBtn1', t.heroBtn1); s('heroBtn2', t.heroBtn2);
+  s('hStat1n', t.heroStat1n); s('hStat1l', t.heroStat1l);
+  s('hStat2n', t.heroStat2n); s('hStat2l', t.heroStat2l);
+  s('hStat3n', t.heroStat3n); s('hStat3l', t.heroStat3l);
+  s('hcardName', t.hcardName); s('hcardTitle', t.hcardTitle);
+  s('hcardRecent', t.hcardRecent);
+  s('hcardS1', t.hcardS1); s('hcardS2', t.hcardS2); s('hcardS3', t.hcardS3);
+  s('fc1t', l === 'ar' ? 'خطبة مترجمة للتركية' : '110 Türkçe Hutbe');
+
+  // marquee
+  const mq = [...t.mq, ...t.mq]; // double for loop
+  document.getElementById('mqTrack').innerHTML = mq.map((m, i) =>
+    `<span class="mq-item">${m}</span>${i < mq.length - 1 ? '<span class="mq-sep">◆</span>' : ''}`
+  ).join('');
+
+  // about
+  s('aboutEye', t.aboutEye); s('aboutH', t.aboutH);
+  s('aboutP1', t.aboutP1); s('aboutP2', t.aboutP2);
+  s('portraitBadge', l === 'ar' ? 'عالم إسلامي' : 'İslam Âlimi');
+  s('afExp', t.afExp); s('afExpL', t.afExpL);
+  s('afSer', t.afSer); s('afSerL', t.afSerL);
+  s('afBook', t.afBook); s('afBookL', t.afBookL);
+  s('afLang', t.afLang); s('afLangL', t.afLangL);
+  document.getElementById('tlWrap').innerHTML = [
+    [t.tl1y, t.tl1t],[t.tl2y, t.tl2t],[t.tl3y, t.tl3t],[t.tl4y, t.tl4t]
+  ].map(([y,tx]) => `<div class="tl-item"><div class="tl-dot"></div><div><div class="tl-yr">${y}</div><div class="tl-txt">${tx}</div></div></div>`).join('');
+
+  // sermons
+  s('sermonsEye', t.sermonsEye); s('sermonsH', t.sermonsH); s('sermonsSub', t.sermonsSub);
+  document.getElementById('searchIn').placeholder = t.searchPH;
+  s('searchBtn', t.searchBtn);
+  const filters = [t.fAll, t.fF1, t.fF2, t.fF3, t.fF4, t.fF5];
+  document.getElementById('filtersRow').innerHTML = filters.map((f,i) =>
+    `<button class="chip${i===0?' on':''}" onclick="filterClick(this)">${f}</button>`
+  ).join('');
+  const sermons = [
+    {cat:t.s1cat, title:t.s1title, desc:t.s1desc, lang:t.s1lang, langT:t.s1langT, time:t.s1time, dl:t.s1dl},
+    {cat:t.s2cat, title:t.s2title, desc:t.s2desc, lang:t.s2lang, langT:t.s2langT, time:t.s2time, dl:t.s2dl},
+    {cat:t.s3cat, title:t.s3title, desc:t.s3desc, lang:t.s3lang, langT:t.s3langT, time:t.s3time, dl:t.s3dl},
+    {cat:t.s4cat, title:t.s4title, desc:t.s4desc, lang:t.s4lang, langT:t.s4langT, time:t.s4time, dl:t.s4dl},
+    {cat:t.s5cat, title:t.s5title, desc:t.s5desc, lang:t.s5lang, langT:t.s5langT, time:t.s5time, dl:t.s5dl},
+    {cat:t.s6cat, title:t.s6title, desc:t.s6desc, lang:t.s6lang, langT:t.s6langT, time:t.s6time, dl:t.s6dl},
+  ];
+  document.getElementById('sermonsGrid').innerHTML = sermons.map(s => `
+    <article class="sc" tabindex="0">
+      <div class="sc-cat">${s.cat}</div>
+      <h3 class="sc-title">${s.title}</h3>
+      <p class="sc-desc">${s.desc}</p>
+      <div class="sc-meta">
+        <span class="lang-badge ${s.lang==='ar'?'lb-ar':'lb-tr'}">${s.langT}</span>
+        <span class="meta-it">⏱ ${s.time}</span>
+        <span class="meta-it">📥 ${s.dl}</span>
+      </div>
+      <div class="sc-actions">
+        <button class="sc-btn sc-read">${t.scRead}</button>
+        <button class="sc-btn sc-dl">${t.scDl}</button>
+      </div>
+    </article>`).join('');
+  const pgs = [t.pg1,t.pg2,t.pg3,t.pg4,'…',t.pg11];
+  document.getElementById('pgRow').innerHTML =
+    `<button class="pg">${l==='ar'?'‹':'›'}</button>` +
+    pgs.map((p,i)=>p==='…'?`<span style="padding:0 4px;color:var(--ink-30)">…</span>`:`<button class="pg${i===0?' on':''}" onclick="pgClick(this)">${p}</button>`).join('') +
+    `<button class="pg">${l==='ar'?'›':'‹'}</button>`;
+
+  // Turkish section
+  s('trEye', t.trEye); s('trH', t.trH); s('trDesc', t.trDesc);
+  document.getElementById('progWrap').innerHTML = [
+    {l:t.pr1l,n:t.pr1n,v:t.pr1v},{l:t.pr2l,n:t.pr2n,v:t.pr2v},
+    {l:t.pr3l,n:t.pr3n,v:t.pr3v},{l:t.pr4l,n:t.pr4n,v:t.pr4v}
+  ].map(p=>`<div class="prog-item"><div class="prog-head"><span class="prog-lbl">${p.l}</span><span class="prog-val">${p.n}</span></div><div class="prog-bar"><div class="prog-fill" style="width:${p.v}%"></div></div></div>`).join('');
+  document.getElementById('trCards').innerHTML = [
+    {i:t.tc1i,t:t.tc1t,x:t.tc1x},{i:t.tc2i,t:t.tc2t,x:t.tc2x},
+    {i:t.tc3i,t:t.tc3t,x:t.tc3x},{i:t.tc4i,t:t.tc4t,x:t.tc4x}
+  ].map(c=>`<div class="tc"><div class="tc-icon">${c.i}</div><div class="tc-title">${c.t}</div><div class="tc-text">${c.x}</div></div>`).join('');
+
+  // books
+  s('booksEye', t.booksEye); s('booksH', t.booksH); s('booksBtn', t.booksBtn);
+  const covers = ['bk-c1','bk-c2','bk-c3','bk-c4'];
+  const books = [
+    {cat:t.b1cat,title:t.b1title,desc:t.b1desc,dl:t.b1dl,lang:t.b1lang},
+    {cat:t.b2cat,title:t.b2title,desc:t.b2desc,dl:t.b2dl,lang:t.b2lang},
+    {cat:t.b3cat,title:t.b3title,desc:t.b3desc,dl:t.b3dl,lang:t.b3lang},
+    {cat:t.b4cat,title:t.b4title,desc:t.b4desc,dl:t.b4dl,lang:t.b4lang},
+  ];
+  document.getElementById('booksGrid').innerHTML = books.map((b,i)=>`
+    <article class="bk" tabindex="0">
+      <div class="bk-cover ${covers[i]}"><div class="bk-pat"></div><div class="bk-cover-title">${b.title}</div></div>
+      <div class="bk-body">
+        <div class="bk-cat">${b.cat}</div>
+        <h3 class="bk-title">${b.title}</h3>
+        <p class="bk-desc">${b.desc}</p>
+        <div class="bk-foot"><a href="#" class="bk-dl">${b.dl}</a><span class="bk-lang">${b.lang}</span></div>
+      </div>
+    </article>`).join('');
+
+  // stats
+  document.getElementById('statsRow').innerHTML = [
+    {n:t.sbn1,l:t.sbl1,s:t.sbs1},{n:t.sbn2,l:t.sbl2,s:t.sbs2},
+    {n:t.sbn3,l:t.sbl3,s:t.sbs3},{n:t.sbn4,l:t.sbl4,s:t.sbs4}
+  ].map(b=>`<div class="sb"><div class="sb-n">${b.n}</div><div class="sb-l">${b.l}</div><div class="sb-s">${b.s}</div></div>`).join('');
+
+  // cats
+  s('catsEye', t.catsEye); s('catsH', t.catsH);
+  document.getElementById('catsGrid').innerHTML = [
+    {i:t.c1i,t:t.c1t,s:t.c1s,a:t.c1a},{i:t.c2i,t:t.c2t,s:t.c2s,a:t.c2a},
+    {i:t.c3i,t:t.c3t,s:t.c3s,a:t.c3a},{i:t.c4i,t:t.c4t,s:t.c4s,a:t.c4a},
+    {i:t.c5i,t:t.c5t,s:t.c5s,a:t.c5a},{i:t.c6i,t:t.c6t,s:t.c6s,a:t.c6a}
+  ].map(c=>`<div class="cat" tabindex="0"><div class="cat-ico">${c.i}</div><div><div class="cat-title">${c.t}</div><div class="cat-sub">${c.s}</div><div class="cat-arr">${c.a}</div></div></div>`).join('');
+
+  // downloads
+  s('dlEye', t.dlEye); s('dlH', t.dlH); s('dlSub', t.dlSub);
+  document.getElementById('dlGrid').innerHTML = `
+    <div class="dlc"><div class="dlc-ico di-pdf">📄</div><div class="dlc-title">${t.dl1t}</div><div class="dlc-sub">${t.dl1s}</div><a href="#" class="dlc-btn db-pdf">${t.dl1b}</a></div>
+    <div class="dlc"><div class="dlc-ico di-audio">🔊</div><div class="dlc-title">${t.dl2t}</div><div class="dlc-sub">${t.dl2s}</div><a href="#" class="dlc-btn db-audio">${t.dl2b}</a></div>
+    <div class="dlc"><div class="dlc-ico di-video">🎬</div><div class="dlc-title">${t.dl3t}</div><div class="dlc-sub">${t.dl3s}</div><a href="#" class="dlc-btn db-video">${t.dl3b}</a></div>`;
+
+  // newsletter
+  s('nlTitle', t.nlTitle); s('nlDesc', t.nlDesc);
+  document.getElementById('nlIn').placeholder = t.nlPH;
+  s('nlBtn', t.nlBtn);
+
+  // contact
+  s('ctEye', t.ctEye); s('ctH', t.ctH); s('ctSub', t.ctSub);
+  s('cfH', t.cfH);
+  s('lbName', t.fName); document.getElementById('fName').placeholder = t.fNamePH;
+  s('lbEmail', t.fEmail); document.getElementById('fEmail').placeholder = t.fEmailPH;
+  s('lbSubject', t.fSubject); document.getElementById('fSubject').placeholder = t.fSubjectPH;
+  s('lbMsg', t.fMsg); document.getElementById('fMsg').placeholder = t.fMsgPH;
+  s('fSubmit', t.fSubmit);
+  s('ctChannels', t.ctChannels); s('ctWa', t.wa); s('ctEm', t.em);
+  s('socialLbl', t.socialLbl);
+  s('qText', t.qText); s('qRef', t.qRef);
+
+  // footer
+  s('ftName', t.logoName); s('ftSub', t.logoSub); s('ftDesc', t.ftDesc);
+  s('ftQ', t.ftQ); s('ftC', t.ftC); s('ftL', t.ftL);
+  document.getElementById('ftLinks').innerHTML = t.ftLinks.map(f=>`<a href="#">${f}</a>`).join('');
+  document.getElementById('ftCats').innerHTML = t.ftCats.map(f=>`<a href="#">${f}</a>`).join('');
+  document.getElementById('ftLangs').innerHTML = t.ftLangs.map(([n,href])=>`<a href="${href}">${n}</a>`).join('');
+  s('ftCopy', t.ftCopy + ' · ' + t.logoName);
+
+  // scroll-reveal reset
+  document.querySelectorAll('.sc,.bk,.cat,.dlc,.tc').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+  });
+  requestAnimationFrame(observeCards);
+}
+
+function switchLang(l) {
+  lang = l;
+  localStorage.setItem('lang', l);
+  render(l);
+}
+
+function filterClick(el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+}
+function pgClick(el) {
+  document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+}
+
+// scroll reveal
+function observeCards() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.sc,.bk,.cat,.dlc,.tc').forEach(el => {
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.transition = 'opacity .55s ease, transform .55s ease';
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.sc,.bk,.cat,.dlc,.tc').forEach(el => io.observe(el));
+}
+
+// back-to-top
+window.addEventListener('scroll', () => {
+  document.getElementById('btt').classList.toggle('vis', window.scrollY > 400);
+});
+
+// Init
+render(lang);
+</script>
+</body>
+</html>
